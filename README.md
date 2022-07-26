@@ -59,13 +59,15 @@ ORDER BY
 
 ### PreQL
 ```sql
-SELECT 
+import concepts.sales as sales;
+
+select
     sales.territory_name,
     sales.sub_total,
     sales.total_taxes,
     sales.total_sales,
-ORDER BY 
-    sales.territory_name DESC
+order by
+    sales.territory_name desc;
 ```
 
 
