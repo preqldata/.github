@@ -64,8 +64,9 @@ SELECT
     sales.territory_name,
     sales.sub_total,
     sales.total_taxes,
-    sales.total_sales
-order by sales.territory_name desc
+    sales.total_sales,
+ORDER BY 
+    sales.territory_name DESC
 ```
 
 
