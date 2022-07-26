@@ -44,18 +44,17 @@ take days to understand which tables are relevant.
 ```sql
 USE AdventureWorks;
 
-SELECT t.Name, SUM(s.SubTotal) AS [Sub Total],
-STR(Sum([TaxAmt])) AS [Total Taxes],
-STR(Sum([TotalDue])) AS [Total Sales]
-
+SELECT 
+    t.Name, 
+    SUM(s.SubTotal) AS [Sub Total],
+    STR(Sum([TaxAmt])) AS [Total Taxes],
+    STR(Sum([TotalDue])) AS [Total Sales]
 FROM Sales.SalesOrderHeader AS s
-
-INNER JOIN Sales.SalesTerritory as t ON
-
-s.TerritoryID = t.TerritoryID
-
-GROUP BY t.Name
-ORDER BY t.Name
+    INNER JOIN Sales.SalesTerritory as t ON s.TerritoryID = t.TerritoryID
+GROUP BY 
+    t.Name
+ORDER BY 
+    t.Name
 ```
 
 ### PreQL
