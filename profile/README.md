@@ -1,7 +1,7 @@
-## PreQL
+## PreQL/Trilogy
 
 Preql [prequel] is a declarative, typed language that compiles to other data access languages,
-most commonly SQL [sequel].
+most commonly SQL [sequel]. You can read more and experiment with it on the demo website [here](https://preqldata.dev/). 
 
 
 ## Why?
@@ -18,12 +18,12 @@ SQL is a declarative language for reading and manipulating data in tables in SQL
 
 This is a perfect fit for an application interacting with a datastore. 
 
-But in data warehouses, a _table_ is an leaky abstraction. Users actually want to declare
-_conceptual_ queries. Seeing revenue by product line is a goal; the table that contains
+But in data warehouses, a _table_ is an leaky abstraction. Users rarely care about tables; "finding the right table"
+is a common problem. Seeing revenue by product line is a goal; the table that contains
 the products and the table that contains revenue are implementation details.
 
 This mismatch between what is being declared
-leads to a sprawling mass of SQL that is duplicative an hard to follow and is critical 
+leads to a sprawling mass of SQL that is duplicative an hard to follow yet is critical 
 to business function. Fortune 500 companies spend millions of dollars trying to reverse 
 engineer the original intent of SQL to document dataflow or lineage, or to refactor
 business logic when moving to a new database.
